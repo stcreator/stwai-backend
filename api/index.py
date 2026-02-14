@@ -14,11 +14,7 @@ if os.getenv("VERCEL_ENV") is None:
 app = FastAPI()
 
 # CORS configuration
-ALLOWED_ORIGINS = [
-    "https://stwai.pages.dev",  # Your GitHub Pages domain
-    "http://localhost:3000",
-    "http://localhost:5000",
-]
+ALLOWED_ORIGINS = ["*"]
 
 app.add_middleware(
     CORSMiddleware,
